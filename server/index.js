@@ -1,6 +1,7 @@
 //api documentation
 import swaggerUi from "swagger-ui-express";
 import swaggerJSDoc from "swagger-jsdoc";
+import dotenv from 'dotenv';
 //package imports
 // const express = require("express"); - this is common js
 import express from "express";
@@ -25,7 +26,8 @@ import jobsRoutes from "./routes/jobsRoute.js";
 import errorMiddleware from "./middlewares/errorMiddleware.js";
 
 //DOT ENV config
-dotenv.config();
+require('dotenv').config();
+
 
 //mongodb connection
 connectDb();
